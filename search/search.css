@@ -1,0 +1,118 @@
+.search-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease;
+ }
+ 
+ .search-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+ 
+ .search-options {
+    display: flex;
+    gap: 20px;
+    font-size: 1em;
+ }
+ 
+ #searchInput {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+ }
+ 
+ .results-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+ }
+ 
+ .result-item {
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+ .result-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+ }
+ 
+ .result-item img {
+    width: 100%;
+    border-radius: 10px;
+ }
+ 
+ .result-item h3 {
+    font-size: 1em;
+    margin: 10px 0 0;
+ }
+
+a.result-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.abstract-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  
+  .geometric-pattern {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: 
+      repeating-linear-gradient(45deg,
+        transparent 0px,
+        transparent 20px,
+        rgba(255, 126, 95, 0.4) 20px,
+        rgba(255, 126, 95, 0.4) 40px
+      ),
+      repeating-linear-gradient(-45deg,
+        transparent 0px,
+        transparent 20px,
+        rgba(254, 180, 123, 0.4) 20px,
+        rgba(254, 180, 123, 0.4) 40px
+      );
+    animation: panBackground 40s linear infinite;
+  }
+  
+  .dynamic-waves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%,
+      rgba(255, 111, 97, 0.3) 0%, 
+      transparent 25% 
+    );
+    animation: pulseWaves 8s ease-in-out infinite;
+  }
+  
+  @keyframes panBackground {
+    from { transform: translate(0%, 0%); }
+    to { transform: translate(-50%, -50%); }
+  }
+  
+  @keyframes pulseWaves {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.2); opacity: 0.4; }
+  }
+  

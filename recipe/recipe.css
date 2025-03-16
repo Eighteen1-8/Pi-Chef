@@ -1,0 +1,203 @@
+.recipe-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
+}
+.recipe-container h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.recipe-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.recipe-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+.recipe-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+.recipe-ingredients {
+  flex: 1 1 300px;
+  padding: 10px;
+}
+.recipe-ingredients h3 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+.recipe-ingredients ul {
+  list-style: disc inside;
+  padding-left: 20px;
+}
+.recipe-ingredients li {
+  margin-bottom: 5px;
+  font-size: 1em;
+}
+.recipe-ingredients li strong {
+  font-weight: bold;
+}
+.recipe-instructions {
+  margin-top: 30px;
+}
+.recipe-instructions h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+.recipe-instructions p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.cooking-tools {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: rgba(249, 249, 249, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.tool {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.tool h3 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.timer-display {
+  font-size: 2em;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.tool button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tool button:hover {
+  opacity: 0.9;
+}
+
+.tool.timer-tool button {
+  font-size: 1.2em;
+}
+
+.converter-inputs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.converter-inputs input,
+.converter-inputs select {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+#convert-result {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.tool.converter-tool {
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fdfdfd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.tool.converter-tool label {
+  font-weight: bold;
+  min-width: 60px;
+  text-align: right;
+}
+
+.tool.converter-tool input,
+.tool.converter-tool select {
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.abstract-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.geometric-pattern {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: 
+    repeating-linear-gradient(45deg,
+      transparent 0px,
+      transparent 20px,
+      rgba(255, 126, 95, 0.4) 20px,
+      rgba(255, 126, 95, 0.4) 40px
+    ),
+    repeating-linear-gradient(-45deg,
+      transparent 0px,
+      transparent 20px,
+      rgba(254, 180, 123, 0.4) 20px,
+      rgba(254, 180, 123, 0.4) 40px
+    );
+  animation: panBackground 40s linear infinite;
+}
+
+.dynamic-waves {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%,
+    rgba(255, 111, 97, 0.3) 0%,
+    transparent 25% 
+  );
+  animation: pulseWaves 8s ease-in-out infinite;
+}
+
+@keyframes panBackground {
+  from { transform: translate(0%, 0%); }
+  to { transform: translate(-50%, -50%); }
+}
+
+@keyframes pulseWaves {
+  0%, 100% { transform: scale(1); opacity: 0.3; } 
+  50% { transform: scale(1.2); opacity: 0.4; }
+}
+
+
+

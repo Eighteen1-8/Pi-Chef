@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Viewer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../homepage/homepage.css">
+    <style>
+        header {
+            padding: 5px;
+        }
+        header h1 {
+            font-size: 1.8em;
+        }
+        webview {
+            width: 100%;
+            height: calc(100vh - 60px);
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-icons">
+            <a href="../homepage/homepage.html" class="nav-icon"><i class="fas fa-home"></i></a>
+        </div>
+        <h1>YouTube</h1>
+    </header>
+    <webview partition="persist:youtube" src="https://youtube.com" allowfullscreen useragent="Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/13.0 Mobile/15E148 Safari/604.1"></webview>
+</body>
+</html>

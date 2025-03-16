@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Finder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./homepage.css"> 
+</head>
+<body onload="var enterSound = document.getElementById('enterSound'); enterSound.volume = 0.3; enterSound.play();">
+<div class="abstract-background">
+  <div class="geometric-pattern"></div>
+  <div class="dynamic-waves"></div>
+</div>
+  <header>
+    <div class="nav-icons">
+      <a href="./homepage.html" class="nav-icon"><i class="fas fa-home"></i></a> 
+      <a href="../external/youtube.html" class="nav-icon" style="margin-left: 10px;"><i class="fab fa-youtube"></i></a> 
+      <a href="../external/spotify.html" class="nav-icon" style="margin-left: 10px;"><i class="fab fa-spotify"></i></a> 
+    </div>
+    <h1>Pi Chef</h1>
+    <div class="nav-right">
+      <a href="../search/search.html" class="nav-icon"><i class="fas fa-search"></i></a>
+    </div>
+  </header>
+  
+  <div class="top-widgets-container">
+    <div class="widget top-widget" id="weather-widget">
+      <h2>Weather</h2>
+      <div id="weather-content">
+        <p>Loading weather...</p>
+      </div>
+    </div>
+    
+    <div class="widget top-widget" id="time-widget">
+      <canvas id="analogClock" width="150" height="150"></canvas>
+      <div id="digitalClock"></div>
+    </div>
+    
+    <div class="widget top-widget" id="news-widget">
+      <h2>Top News</h2>
+      <div id="news-content">
+        <p>Loading news...</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="widget wide-widget" id="recommended-recipes-widget">
+    <h2>Recommended Recipes</h2>
+    <div class="recipes-container" id="recommendedRecipes"></div>
+    <button class="button" onclick="var cs=document.getElementById('conversionSound'); cs.volume=0.12; cs.play(); fetchRecommendedRecipes()">Refresh Recipes</button>
+  </div>
+  
+  <div id="scroll-down">
+    <i class="fas fa-chevron-down"></i>
+  </div>
+
+  <a href="../settings/settings.html" class="settings-icon" style="position: fixed; bottom: 20px; right: 20px; font-size: 2rem; color: #000; z-index: 1000;">
+    <i class="fas fa-cog"></i>
+  </a>
+
+  <audio id="enterSound" src="../audio/enter.mp3" autoplay></audio>
+  <audio id="conversionSound" src="../audio/conversion.mp3"></audio>
+
+  <script src="./homepage.js"></script>
+</body>
+</html>

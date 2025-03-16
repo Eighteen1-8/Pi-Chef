@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Recipes - Recipe Finder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../homepage/homepage.css">
+  <link rel="stylesheet" href="./search.css">
+</head>
+<body onload="var enterSound = document.getElementById('enterSound'); enterSound.volume = 0.3; enterSound.play();">
+    <div class="abstract-background">
+        <div class="geometric-pattern"></div>
+        <div class="dynamic-waves"></div>
+      </div>
+  <header>
+    <div class="nav-icons">
+      <a href="javascript:history.back()" class="nav-icon"><i class="fas fa-arrow-left"></i></a>
+      <a href="../homepage/homepage.html" class="nav-icon"><i class="fas fa-home"></i></a>
+    </div>
+    <h1>Search Recipes</h1>
+  </header>
+  <div class="search-container">
+    <form id="searchForm">
+      <div class="search-options">
+         <label>
+           <input type="radio" name="searchType" value="name" checked> By Name
+         </label>
+         <label>
+           <input type="radio" name="searchType" value="ingredient"> By Ingredient
+         </label>
+      </div>
+      <input type="text" id="searchInput" placeholder="Enter recipe name or ingredient" required>
+      <button type="submit" class="button" onclick="var cs=document.getElementById('clickSound'); cs.volume = 0.3; cs.play(); performSearch()">Search</button>
+    </form>
+    <div id="searchResults"></div>
+  </div>
+  <audio id="enterSound" src="../audio/enter.mp3" autoplay></audio>
+  <audio id="clickSound" src="../audio/click.mp3"></audio>
+  <script src="./search.js"></script>
+</body>
+</html>
